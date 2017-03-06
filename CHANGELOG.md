@@ -1,3 +1,12 @@
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/christophehurpeau/modern-browsers/compare/v0.1.1...v0.1.2) (2017-03-06)
+
+
+### Features
+
+* node 4 ([32f338e](https://github.com/christophehurpeau/modern-browsers/commit/32f338e))
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/christophehurpeau/modern-browsers/compare/v0.1.0...v0.1.1) (2017-03-06)
 
