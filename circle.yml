@@ -1,8 +1,6 @@
 machine:
   node:
-    version: 6.9.4
-  environment:
-    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+    version: 7.6.0
 
 general:
   branches:
@@ -11,6 +9,7 @@ general:
 
 dependencies:
   cache_directories:
+    - ~/.cache/yarn
     - node_modules
   override:
     - yarn
