@@ -12,17 +12,26 @@ var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // https://www.npmjs.com/package/babel-preset-modern-browsers
-var agents = [{ name: 'Edge', regexp: /edge\/([\d]+)/i, modernMinVersion: 14 }, { name: 'Firefox', regexp: /firefox\/([\d]+)/i, modernMinVersion: 51 }, { name: 'Chrome', regexp: /(?:chrom(?:e|ium)|crios)\/([\d]+)/i, modernMinVersion: 51 }, // also works for opera.
-{ name: 'Safari', regexp: /version\/([\d\w.-]+).*safari/i, modernMinVersion: 10 }];
+var agents = [{ name: 'Edge', regexp: /edge\/([\d]+)/i, modernMinVersion: 14 }, { name: 'Firefox', regexp: /firefox\/([\d]+)/i, modernMinVersion: 52 }, { name: 'Chrome', regexp: /(?:chrom(?:e|ium)|crios)\/([\d]+)/i, modernMinVersion: 55 }, // also works for opera.
+{ name: 'Safari', regexp: /version\/([\d\w.-]+).*safari/i, modernMinVersion: 10.1 }];
+
+var OptionsType = _flowRuntime2.default.type('OptionsType', _flowRuntime2.default.exactObject(_flowRuntime2.default.property('safari10', _flowRuntime2.default.nullable(_flowRuntime2.default.boolean()))));
 
 function isModernBrowser(userAgent) {
+  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      safari10 = _ref.safari10;
+
   var _userAgentType = _flowRuntime2.default.string();
 
   _flowRuntime2.default.param('userAgent', _userAgentType).assert(userAgent);
 
+  if (arguments[1] !== undefined) {
+    _flowRuntime2.default.param('arguments[1]', OptionsType).assert(arguments[1]);
+  }
+
   return agents.some(function (agent) {
     var res = agent.regexp.exec(userAgent);
-    return res && parseInt(res[1], 10) >= agent.modernMinVersion;
+    return res && parseFloat(res[1]) >= (safari10 && agent.name === 'Safari' ? 10 : agent.modernMinVersion);
   });
 }
 //# sourceMappingURL=index.js.map
