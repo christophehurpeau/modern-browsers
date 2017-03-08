@@ -4,7 +4,7 @@
 
 ### Features
 
-* modern browsers are now: firefox >= 52, chrome >= 55, safari >= 10.1, add option ([6b8f8d0](https://github.com/christophehurpeau/modern-browsers/commit/6b8f8d0))
+* modern browsers are now: firefox >= 52, chrome >= 55, safari >= 10.1, add option for safari 10 ([6b8f8d0](https://github.com/christophehurpeau/modern-browsers/commit/6b8f8d0))
 
 
 <a name="0.1.2"></a>
