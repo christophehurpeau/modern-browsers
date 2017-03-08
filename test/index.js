@@ -16,7 +16,7 @@ suite('modern browsers', () => {
   });
 
   test('safari 10 for ios', () => {
-    ok(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8'));
+    ok(isModernBrowser('Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1'));
   });
 
   test('firefox 51 for windows', () => {
