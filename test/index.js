@@ -12,19 +12,21 @@ suite('modern browsers', () => {
   });
 
   test('safari 10 for mac', () => {
-    ok(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8'));
+    ok(isModernBrowser(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8',
+      { safari10: true }
+    ));
   });
 
   test('safari 10 for ios', () => {
-    ok(isModernBrowser('Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1'));
+    ok(isModernBrowser(
+      'Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1',
+      { safari10: true }
+    ));
   });
 
-  test('firefox 51 for windows', () => {
-    ok(isModernBrowser('Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'));
-  });
-
-  test('firefox 51 for linux', () => {
-    ok(isModernBrowser('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'));
+  test('firefox 52 for mac', () => {
+    ok(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Firefox/52.0'));
   });
 
   test('edge 14', () => {
@@ -43,6 +45,22 @@ suite('old browsers', () => {
 
   test('safari 8 for mac', () => {
     ok(!isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17'));
+  });
+
+  test('safari 10 for mac', () => {
+    ok(!isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8'));
+  });
+
+  test('safari 10 for ios', () => {
+    ok(!isModernBrowser('Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1'));
+  });
+
+  test('firefox 51 for windows', () => {
+    ok(!isModernBrowser('Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'));
+  });
+
+  test('firefox 51 for linux', () => {
+    ok(!isModernBrowser('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0'));
   });
 
   test('opera 34 for mac', () => {
