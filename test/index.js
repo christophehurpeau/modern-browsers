@@ -12,17 +12,11 @@ suite('modern browsers', () => {
   });
 
   test('safari 10 for mac', () => {
-    ok(isModernBrowser(
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8',
-      { safari10: true }
-    ));
+    ok(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8'));
   });
 
   test('safari 10 for ios', () => {
-    ok(isModernBrowser(
-      'Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1',
-      { safari10: true }
-    ));
+    ok(isModernBrowser('Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1'));
   });
 
   test('firefox 52 for mac', () => {
@@ -45,14 +39,6 @@ suite('old browsers', () => {
 
   test('safari 8 for mac', () => {
     ok(!isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17'));
-  });
-
-  test('safari 10 for mac', () => {
-    ok(!isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8'));
-  });
-
-  test('safari 10 for ios', () => {
-    ok(!isModernBrowser('Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1'));
   });
 
   test('firefox 51 for windows', () => {
