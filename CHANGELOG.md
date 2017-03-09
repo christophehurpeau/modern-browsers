@@ -1,3 +1,12 @@
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/christophehurpeau/modern-browsers/compare/v0.2.0...v0.2.1) (2017-03-09)
+
+
+### Bug Fixes
+
+* chrome >= 52, safari >= 10 ([caae5cd](https://github.com/christophehurpeau/modern-browsers/commit/caae5cd))
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/christophehurpeau/modern-browsers/compare/v0.1.2...v0.2.0) (2017-03-08)
 
