@@ -1,5 +1,7 @@
 # modern-browsers [![NPM version][npm-image]][npm-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/christophehurpeau/modern-browsers.svg)](https://greenkeeper.io/)
+
 Regexp of modern browsers
 
 [![Build Status][circleci-status-image]][circleci-status-url]
