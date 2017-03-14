@@ -23,7 +23,7 @@
     "watch": "pob-watch"
   },
   "dependencies": {
-    "flow-runtime": "^0.8.0"
+    "flow-runtime": "^0.9.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
