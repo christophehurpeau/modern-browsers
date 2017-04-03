@@ -7,7 +7,6 @@
   "license": "ISC",
   "repository": "git@github.com:christophehurpeau/modern-browsers.git",
   "homepage": "https://github.com/christophehurpeau/modern-browsers",
-  "engines": {},
   "main": "./index.js",
   "scripts": {
     "build": "pob-build",
@@ -23,14 +22,14 @@
     "watch": "pob-watch"
   },
   "dependencies": {
-    "flow-runtime": "^0.8.0"
+    "flow-runtime": "^0.10.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.0.0",
-    "babel-preset-env": "^1.2.1",
-    "babel-preset-latest-node": "^0.1.0",
-    "eslint": "^3.17.1",
-    "eslint-config-airbnb-base": "^11.1.1",
+    "babel-eslint": "^7.2.1",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-latest-node": "^0.2.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.2",
     "eslint-config-pob": "^11.1.0",
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-import": "^2.2.0",
@@ -38,7 +37,7 @@
     "komet": "^0.1.4",
     "komet-karma": "^0.2.5",
     "mocha": "^3.2.0",
-    "pob-babel": "^17.0.2",
+    "pob-babel": "^17.2.0",
     "pob-release": "^3.1.0",
     "xunit-file": "^1.0.0"
   }
