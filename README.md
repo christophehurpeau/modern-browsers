@@ -4,8 +4,8 @@ Regexp of modern browsers
 
 [![Build Status][circleci-status-image]][circleci-status-url]
 [![Travis Status][travisci-status-image]][travisci-status-url]
-[![Dependency ci Status][dependencyci-image]][dependencyci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
+[![Dependency ci Status][dependencyci-image]][dependencyci-url]
 [![Coverage percentage][coverage-image]][coverage-url]
 
 ## Why ?
@@ -25,6 +25,11 @@ import isModernBrowser from 'modern-browsers';
 
 console.log(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'));
 ```
+
+## Options
+
+- `edge`: default to `true`, set to `false` if you configured `edge: false` in the preset.
+- `safari10`: default to `true`, set to `false` if you configured `safari10: false` in the preset.
 
 [npm-image]: https://img.shields.io/npm/v/modern-browsers.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/modern-browsers

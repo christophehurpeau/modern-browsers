@@ -5,5 +5,24 @@
       "authorEmail": "christophe@hurpeau.com",
       "authorUrl": "https://christophe.hurpeau.com"
     }
+  },
+  "pob": {
+    "pob-config": {
+      "envs": [
+        "node6",
+        "node8",
+        "older-node"
+      ],
+      "documentation": false,
+      "doclets": false,
+      "testing": {
+        "circleci": true,
+        "travisci": true,
+        "codecov": true
+      },
+      "entries": [
+        "index"
+      ]
+    }
   }
 }

@@ -1,0 +1,8 @@
+{
+  "env": {
+ 	"only": ["src/"],
+    "test": {
+      "presets": ["pob-babel/jest-preset"]
+    }
+  }
+}
