@@ -5,19 +5,26 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = isModernBrowser;
 // https://www.npmjs.com/package/babel-preset-modern-browsers
-const agents = [{ name: 'Edge', optionName: 'edge', regexp: /edge\/([\d]+)/i, modernMinVersion: 15 }, { name: 'Firefox', regexp: /firefox\/([\d]+)/i, modernMinVersion: 55 }, { name: 'Chrome', regexp: /chrom(?:e|ium)\/([\d]+)/i, modernMinVersion: 60 }, // also works for opera.
-{
-  name: 'Safari',
-  optionName: 'safari10',
-  regexp: /version\/([\d\w.-]+).*safari/i,
-  modernMinVersion: 10.1
-}];
+const agents = {
+  edge: /edge\/([\d]+)/i,
+  firefox: /firefox\/([\d]+)/i,
+  chrome: /chrom(?:e|ium)\/([\d]+)/i, // also works for opera.
+  safari: /version\/([\d\w.-]+).*safari/i
+};
+
+const minVersionsForOptions = exports.minVersionsForOptions = options => {
+  if (options.edge || options.safari10) {
+    return [{ key: 'edge', minVersion: 15 }, { key: 'firefox', minVersion: 53 }, { key: 'chrome', minVersion: 55 }, { key: 'safari', minVersion: 10.1 }];
+  }
+
+  return [{ key: 'firefox', minVersion: 55 }, { key: 'chrome', minVersion: 60 }];
+};
 
 function isModernBrowser(userAgent, options = { edge: true, safari10: true }) {
-  return agents.some(agent => {
-    if (agent.optionName && !options[agent.optionName]) return false;
-    const res = agent.regexp.exec(userAgent);
-    return res && parseFloat(res[1]) >= agent.modernMinVersion;
+  const minVersions = minVersionsForOptions(options);
+  return minVersions.some(({ key, minVersion }) => {
+    const res = agents[key].exec(userAgent);
+    return res && parseFloat(res[1]) >= minVersion;
   });
 }
 //# sourceMappingURL=index.js.map
