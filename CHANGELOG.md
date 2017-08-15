@@ -1,3 +1,12 @@
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/christophehurpeau/modern-browsers/compare/v0.3.0...v0.4.0) (2017-08-15)
+
+
+### Features
+
+* pob upgrade, update modern browsers and add options ([4da6f81](https://github.com/christophehurpeau/modern-browsers/commit/4da6f81))
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/christophehurpeau/modern-browsers/compare/v0.2.1...v0.3.0) (2017-04-03)
 
