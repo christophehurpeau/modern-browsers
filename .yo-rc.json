@@ -11,7 +11,8 @@
       "envs": [
         "node6",
         "node8",
-        "older-node"
+        "older-node",
+        "module-node8"
       ],
       "documentation": false,
       "doclets": false,

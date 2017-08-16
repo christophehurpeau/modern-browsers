@@ -13,15 +13,11 @@ var agents = {
 };
 
 var minVersionsForOptions = exports.minVersionsForOptions = function minVersionsForOptions(options) {
-  if (options.edge || options.safari10) {
-    return [{ key: 'edge', minVersion: 15 }, { key: 'firefox', minVersion: 53 }, { key: 'chrome', minVersion: 55 }, { key: 'safari', minVersion: 10.1 }];
-  }
-
-  return [{ key: 'firefox', minVersion: 55 }, { key: 'chrome', minVersion: 60 }];
+  return options.edge || options.safari10 ? [{ key: 'edge', minVersion: 15 }, { key: 'firefox', minVersion: 53 }, { key: 'chrome', minVersion: 55 }, { key: 'safari', minVersion: 10.1 }] : [{ key: 'firefox', minVersion: 55 }, { key: 'chrome', minVersion: 60 }];
 };
 
 function isModernBrowser(userAgent) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { edge: true, safari10: true };
+  var options = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : { edge: true, safari10: true };
 
   var minVersions = minVersionsForOptions(options);
   return minVersions.some(function (_ref) {

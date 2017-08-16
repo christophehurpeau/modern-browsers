@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.minVersionsForOptions = undefined;
+exports.minVersionsForOptions = void 0;
 exports.default = isModernBrowser;
 
 var _flowRuntime = require('flow-runtime');
@@ -20,13 +20,7 @@ const agents = {
   safari: /version\/([\d\w.-]+).*safari/i
 };
 
-const minVersionsForOptions = exports.minVersionsForOptions = options => {
-  if (options.edge || options.safari10) {
-    return [{ key: 'edge', minVersion: 15 }, { key: 'firefox', minVersion: 53 }, { key: 'chrome', minVersion: 55 }, { key: 'safari', minVersion: 10.1 }];
-  }
-
-  return [{ key: 'firefox', minVersion: 55 }, { key: 'chrome', minVersion: 60 }];
-};
+const minVersionsForOptions = exports.minVersionsForOptions = options => options.edge || options.safari10 ? [{ key: 'edge', minVersion: 15 }, { key: 'firefox', minVersion: 53 }, { key: 'chrome', minVersion: 55 }, { key: 'safari', minVersion: 10.1 }] : [{ key: 'firefox', minVersion: 55 }, { key: 'chrome', minVersion: 60 }];
 
 function isModernBrowser(userAgent, options = { edge: true, safari10: true }) {
   let _userAgentType = _flowRuntime2.default.string();
