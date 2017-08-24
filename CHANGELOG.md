@@ -1,3 +1,17 @@
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/christophehurpeau/modern-browsers/compare/v0.4.1...v0.5.0) (2017-08-24)
+
+
+### Features
+
+* support iOS webkit-based browsers, new API with options ([42ba76b](https://github.com/christophehurpeau/modern-browsers/commit/42ba76b))
+
+
+### BREAKING CHANGES
+
+* new API with options first
+
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://github.com/christophehurpeau/modern-browsers/compare/v0.4.0...v0.4.1) (2017-08-15)
 
