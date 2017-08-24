@@ -21,7 +21,9 @@ npm install --save modern-browsers
 ## Usage
 
 ```js
-import isModernBrowser from 'modern-browsers';
+import createIsModernBrowser from 'modern-browsers';
+
+const isModernBrowser = createIsModernBrowser({ edge: true, safari10: true });
 
 console.log(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'));
 ```

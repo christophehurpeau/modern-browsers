@@ -1,31 +1,41 @@
 // https://www.npmjs.com/package/babel-preset-modern-browsers
-const agents = {
-  edge: /edge\/([\d]+)/i,
-  firefox: /firefox\/([\d]+)/i,
-  chrome: /chrom(?:e|ium)\/([\d]+)/i, // also works for opera.
-  safari: /version\/([\d\w.-]+).*safari/i,
-};
+const agents = [
+  { key: 'edge', regExp: /edge\/([\d]+)/i },
+  { key: 'firefox', regExp: /firefox\/([\d]+)/i },
+  { key: 'chrome', regExp: /chrom(?:e|ium)\/([\d]+)/i }, // also works for opera.
+  { key: 'safari', regExp: /version\/([\d.]+).*safari/i },
+  { key: 'mobile safari webview', regExp: /(?:iPod|iPhone|iPad).+AppleWebKit\/([\d.]+)/i },
+];
 
 export const minVersionsForOptions = options => {
   if (options.edge || options.safari10) {
-    return [
-      { key: 'edge', minVersion: 15 },
-      { key: 'firefox', minVersion: 53 },
-      { key: 'chrome', minVersion: 55 },
-      { key: 'safari', minVersion: 10.1 },
-    ];
+    return {
+      edge: 15,
+      firefox: 53,
+      chrome: 55,
+      safari: 10.1,
+      // https://en.wikipedia.org/wiki/Safari_version_history
+      'mobile safari webview': 603.1,
+    };
   }
 
-  return [{ key: 'firefox', minVersion: 55 }, { key: 'chrome', minVersion: 60 }];
+  return { firefox: 55, chrome: 60 };
 };
 
-export default function isModernBrowser(
-  userAgent: string,
-  options = { edge: true, safari10: true },
-) {
+export default (options = { edge: true, safari10: true }) => {
   const minVersions = minVersionsForOptions(options);
-  return minVersions.some(({ key, minVersion }) => {
-    const res = agents[key].exec(userAgent);
-    return res && parseFloat(res[1]) >= minVersion;
-  });
-}
+  return (userAgent: string) => {
+    let agent;
+    agents.some(({ key, regExp }) => {
+      const res = regExp.exec(userAgent);
+      if (!res || !res[1]) return false;
+      agent = { key, version: res[1] };
+      return true;
+    });
+    if (!agent) return false;
+
+    const minVersion = minVersions[agent.key];
+    if (!minVersion) return false;
+    return parseFloat(agent.version) >= minVersion;
+  };
+};
