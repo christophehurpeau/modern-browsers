@@ -50,16 +50,13 @@ describe('{ edge: false, safari10: false }', () => {
   const isModernBrowser = createIsModernBrowser({ edge: false, safari10: false });
 
   describe('modern browsers', () => {
-    [
-      'chrome 60 on mac',
-      'opera 47 on mac',
-      'firefox 55 on mac',
-      'firefox 55 on windows',
-    ].forEach(name => {
-      test(name, () => {
-        expect(isModernBrowser(userAgents[name])).toBe(true);
-      });
-    });
+    ['chrome 60 on mac', 'opera 47 on mac', 'firefox 55 on mac', 'firefox 55 on windows'].forEach(
+      name => {
+        test(name, () => {
+          expect(isModernBrowser(userAgents[name])).toBe(true);
+        });
+      },
+    );
   });
 
   describe('old browsers', () => {

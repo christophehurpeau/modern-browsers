@@ -1,8 +1,10 @@
 {
   "env": {
- 	"only": ["src/"],
     "test": {
-      "presets": ["pob-babel/jest-preset"]
+      "only": ["src/"],
+      "presets": [
+        ["pob-babel/preset", { "flow": false }]
+      ]
     }
   }
 }

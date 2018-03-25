@@ -1,12 +1,18 @@
-# modern-browsers [![NPM version][npm-image]][npm-url]
+<h3 align="center">
+  modern-browsers
+</h3>
 
-Regexp of modern browsers
+<p align="center">
+  Regexp of modern browsers
+</p>
 
-[![Build Status][circleci-status-image]][circleci-status-url]
-[![Travis Status][travisci-status-image]][travisci-status-url]
-[![Dependency Status][daviddm-image]][daviddm-url]
-[![Dependency ci Status][dependencyci-image]][dependencyci-url]
-[![Coverage percentage][coverage-image]][coverage-url]
+<p align="center">
+  <a href="https://npmjs.org/package/modern-browsers"><img src="https://img.shields.io/npm/v/modern-browsers.svg?style=flat-square"></a>
+  <a href="https://circleci.com/gh/christophehurpeau/modern-browsers"><img src="https://img.shields.io/circleci/project/christophehurpeau/modern-browsers/master.svg?style=flat-square"></a>
+  <a href="https://david-dm.org/christophehurpeau/modern-browsers"><img src="https://david-dm.org/christophehurpeau/modern-browsers.svg?style=flat-square"></a>
+  <a href="https://dependencyci.com/github/christophehurpeau/modern-browsers"><img src="https://dependencyci.com/github/christophehurpeau/modern-browsers/badge?style=flat-square"></a>
+  <a href="https://codecov.io/gh/christophehurpeau/modern-browsers"><img src="https://img.shields.io/codecov/c/github/christophehurpeau/modern-browsers/master.svg?style=flat-square"></a>
+</p>
 
 ## Why ?
 
@@ -32,17 +38,3 @@ console.log(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) App
 
 - `edge`: default to `true`, set to `false` if you configured `edge: false` in the preset.
 - `safari10`: default to `true`, set to `false` if you configured `safari10: false` in the preset.
-
-[npm-image]: https://img.shields.io/npm/v/modern-browsers.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/modern-browsers
-[daviddm-image]: https://david-dm.org/christophehurpeau/modern-browsers.svg?style=flat-square
-[daviddm-url]: https://david-dm.org/christophehurpeau/modern-browsers
-[dependencyci-image]: https://dependencyci.com/github/christophehurpeau/modern-browsers/badge?style=flat-square
-[dependencyci-url]: https://dependencyci.com/github/christophehurpeau/modern-browsers
-[circleci-status-image]: https://img.shields.io/circleci/project/christophehurpeau/modern-browsers/master.svg?style=flat-square
-[circleci-status-url]: https://circleci.com/gh/christophehurpeau/modern-browsers
-[travisci-status-image]: https://img.shields.io/travis/christophehurpeau/modern-browsers/master.svg?style=flat-square
-[travisci-status-url]: https://travis-ci.org/christophehurpeau/modern-browsers
-[coverage-image]: https://img.shields.io/codecov/c/github/christophehurpeau/modern-browsers/master.svg?style=flat-square
-[coverage-url]: https://codecov.io/gh/christophehurpeau/modern-browsers
-[docs-coverage-url]: https://christophehurpeau.github.io/modern-browsers/coverage/lcov-report/
