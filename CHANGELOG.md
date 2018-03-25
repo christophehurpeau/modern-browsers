@@ -1,3 +1,7 @@
+<a name="0.5.1"></a>
+## [0.5.1](https://github.com/christophehurpeau/modern-browsers/compare/v0.5.0...v0.5.1) (2018-03-25)
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/christophehurpeau/modern-browsers/compare/v0.4.1...v0.5.0) (2017-08-24)
 
