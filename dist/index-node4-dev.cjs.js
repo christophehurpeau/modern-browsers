@@ -2,16 +2,12 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var t = _interopDefault(require('flow-runtime'));
-
 // https://www.npmjs.com/package/babel-preset-modern-browsers
 var agents = [{ key: 'edge', regExp: /edge\/([\d]+)/i }, { key: 'firefox', regExp: /firefox\/([\d]+)/i }, { key: 'chrome', regExp: /chrom(?:e|ium)\/([\d]+)/i }, // also works for opera.
 { key: 'safari', regExp: /version\/([\d.]+).*safari/i }, { key: 'mobile safari webview', regExp: /(?:iPod|iPhone|iPad).+AppleWebKit\/([\d.]+)/i }];
 
 var minVersionsForOptions = function minVersionsForOptions(options) {
-  if (options.edge || options.safari10) {
+  if (options.edge) {
     return {
       edge: 15,
       firefox: 53,
@@ -22,18 +18,18 @@ var minVersionsForOptions = function minVersionsForOptions(options) {
     };
   }
 
-  return { firefox: 55, chrome: 60 };
+  return { firefox: 57, chrome: 63, safari: 11.1, 'mobile safari webview': 605.1 };
 };
 
 var index = (function () {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { edge: true, safari10: true };
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { edge: true };
+
+  if (options.safari10 !== undefined) {
+    throw new Error('option safari10 removed');
+  }
 
   var minVersions = minVersionsForOptions(options);
   return function (userAgent) {
-    var _userAgentType = t.string();
-
-    t.param('userAgent', _userAgentType).assert(userAgent);
-
     var agent = void 0;
     agents.some(function (_ref) {
       var key = _ref.key,

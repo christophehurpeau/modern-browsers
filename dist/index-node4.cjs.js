@@ -7,7 +7,7 @@ var agents = [{ key: 'edge', regExp: /edge\/([\d]+)/i }, { key: 'firefox', regEx
 { key: 'safari', regExp: /version\/([\d.]+).*safari/i }, { key: 'mobile safari webview', regExp: /(?:iPod|iPhone|iPad).+AppleWebKit\/([\d.]+)/i }];
 
 var minVersionsForOptions = function minVersionsForOptions(options) {
-  if (options.edge || options.safari10) {
+  if (options.edge) {
     return {
       edge: 15,
       firefox: 53,
@@ -18,11 +18,15 @@ var minVersionsForOptions = function minVersionsForOptions(options) {
     };
   }
 
-  return { firefox: 55, chrome: 60 };
+  return { firefox: 57, chrome: 63, safari: 11.1, 'mobile safari webview': 605.1 };
 };
 
 var index = (function () {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { edge: true, safari10: true };
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { edge: true };
+
+  if (options.safari10 !== undefined) {
+    throw new Error('option safari10 removed');
+  }
 
   var minVersions = minVersionsForOptions(options);
   return function (userAgent) {

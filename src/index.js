@@ -19,7 +19,7 @@ export const minVersionsForOptions = options => {
     };
   }
 
-  return { firefox: 55, chrome: 60, safari: 11.1, 'mobile safari webview': 605.1 };
+  return { firefox: 57, chrome: 63, safari: 11.1, 'mobile safari webview': 605.1 };
 };
 
 export default (options = { edge: true }) => {
