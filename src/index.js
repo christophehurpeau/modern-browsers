@@ -8,7 +8,7 @@ const agents = [
 ];
 
 export const minVersionsForOptions = options => {
-  if (options.edge || options.safari10) {
+  if (options.edge) {
     return {
       edge: 15,
       firefox: 53,
@@ -19,12 +19,16 @@ export const minVersionsForOptions = options => {
     };
   }
 
-  return { firefox: 55, chrome: 60 };
+  return { firefox: 55, chrome: 60, safari: 11.1, 'mobile safari webview': 605.1 };
 };
 
-export default (options = { edge: true, safari10: true }) => {
+export default (options = { edge: true }) => {
+  if (options.safari10 !== undefined) {
+    throw new Error('option safari10 removed');
+  }
+
   const minVersions = minVersionsForOptions(options);
-  return (userAgent: string) => {
+  return userAgent => {
     let agent;
     agents.some(({ key, regExp }) => {
       const res = regExp.exec(userAgent);

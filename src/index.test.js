@@ -22,6 +22,8 @@ const userAgents = {
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17',
   'safari 10 on mac':
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8',
+  'safari 11.1 on mac':
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/605.1.4 (KHTML, like Gecko) Version/11.1 Safari/605.1.4',
   'safari 10 on iPhone':
     'Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1',
   'chrome 60 on iPhone 10.3.3':
@@ -46,17 +48,21 @@ const userAgents = {
     'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1',
 };
 
-describe('{ edge: false, safari10: false }', () => {
-  const isModernBrowser = createIsModernBrowser({ edge: false, safari10: false });
+describe('{ edge: false }', () => {
+  const isModernBrowser = createIsModernBrowser({ edge: false });
 
   describe('modern browsers', () => {
-    ['chrome 60 on mac', 'opera 47 on mac', 'firefox 55 on mac', 'firefox 55 on windows'].forEach(
-      name => {
-        test(name, () => {
-          expect(isModernBrowser(userAgents[name])).toBe(true);
-        });
-      },
-    );
+    [
+      'chrome 60 on mac',
+      'opera 47 on mac',
+      'firefox 55 on mac',
+      'firefox 55 on windows',
+      'safari 11.1 on mac',
+    ].forEach(name => {
+      test(name, () => {
+        expect(isModernBrowser(userAgents[name])).toBe(true);
+      });
+    });
   });
 
   describe('old browsers', () => {
@@ -87,10 +93,8 @@ describe('{ edge: false, safari10: false }', () => {
   });
 });
 
-describe('{ edge: true, safari10: true }', () => {
-  const isModernBrowserWithEdge = createIsModernBrowser({ edge: true, safari10: false });
-  const isModernBrowserWithSafari = createIsModernBrowser({ edge: false, safari10: true });
-  const isModernBrowserWithBoth = createIsModernBrowser({ edge: true, safari10: true });
+describe('{ edge: true }', () => {
+  const isModernBrowserWithEdge = createIsModernBrowser({ edge: true });
 
   describe('modern browsers', () => {
     [
@@ -99,7 +103,7 @@ describe('{ edge: true, safari10: true }', () => {
       'chrome 60 on mac',
       'opera 43 on windows',
       'opera 47 on mac',
-      'safari 10.1 on mac',
+      'safari 11.1 on mac',
       'chrome 60 on iPhone 10.3.3',
       'firefox focus on iPhone 10.3',
       'firefox 54 on windows',
@@ -108,8 +112,6 @@ describe('{ edge: true, safari10: true }', () => {
     ].forEach(name => {
       test(name, () => {
         expect(isModernBrowserWithEdge(userAgents[name])).toBe(true);
-        expect(isModernBrowserWithSafari(userAgents[name])).toBe(true);
-        expect(isModernBrowserWithBoth(userAgents[name])).toBe(true);
       });
     });
   });
@@ -130,8 +132,6 @@ describe('{ edge: true, safari10: true }', () => {
     ].forEach(name => {
       test(name, () => {
         expect(isModernBrowserWithEdge(userAgents[name])).toBe(false);
-        expect(isModernBrowserWithSafari(userAgents[name])).toBe(false);
-        expect(isModernBrowserWithBoth(userAgents[name])).toBe(false);
       });
     });
   });
