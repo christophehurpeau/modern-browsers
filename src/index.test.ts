@@ -1,7 +1,8 @@
-import createIsModernBrowser from './';
+import createIsModernBrowser from '.';
 
-const userAgents = {
-  'ie 11': 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
+const userAgents: { [key: string]: string } = {
+  'ie 11':
+    'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
   'edge 13':
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586',
   'edge 14':
@@ -28,6 +29,8 @@ const userAgents = {
     'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) CriOS/60.0.3112.89 Mobile/14G60 Safari/602.1',
   'chrome 63 on mac':
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3218.0 Safari/537.36',
+  'chrome 66 on mac':
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3351.0 Safari/537.36',
   'firefox 51 on windows':
     'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0',
   'firefox 51 on linux':
@@ -42,7 +45,8 @@ const userAgents = {
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0',
   'firefox 56 on mac':
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:56.0) Gecko/20100101 Firefox/56.0',
-  'firefox 57 on linux': 'Mozilla/5.0 (X11; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'firefox 57 on linux':
+    'Mozilla/5.0 (X11; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0',
   'firefox 58 on windows':
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
   'firefox focus on iPhone 10.3':
@@ -55,6 +59,8 @@ const userAgents = {
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36 OPR/47.0.2631.55',
   'opera 50 on linux':
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36 OPR/50.0.2762.45',
+  'opera 53 on linux':
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36 OPR/53.0.2907.68',
 };
 
 describe('{ edge: false }', () => {
@@ -63,11 +69,10 @@ describe('{ edge: false }', () => {
   describe('modern browsers', () => {
     [
       'safari 11.1 on mac',
-      'chrome 63 on mac',
-      'opera 50 on linux',
-      'firefox 57 on linux',
+      'chrome 66 on mac',
+      'opera 53 on linux',
       'firefox 58 on windows',
-    ].forEach(name => {
+    ].forEach((name) => {
       test(name, () => {
         expect(isModernBrowser(userAgents[name])).toBe(true);
       });
@@ -82,9 +87,11 @@ describe('{ edge: false }', () => {
       'edge 15',
       'chrome 56 on mac',
       'chrome 60 on mac',
+      'chrome 63 on mac',
       'opera 34 on mac',
       'opera 43 on windows',
       'opera 47 on mac',
+      'opera 50 on linux',
       'safari 8 on mac',
       'safari 10 on mac',
       'safari 10 on iPhone',
@@ -99,7 +106,8 @@ describe('{ edge: false }', () => {
       'firefox 55 on mac',
       'firefox 55 on windows',
       'firefox 56 on mac',
-    ].forEach(name => {
+      'firefox 57 on linux',
+    ].forEach((name) => {
       test(name, () => {
         expect(isModernBrowser(userAgents[name])).toBe(false);
       });
@@ -129,7 +137,7 @@ describe('{ edge: true }', () => {
       'firefox 56 on mac',
       'chrome 63 on mac',
       'opera 50 on linux',
-    ].forEach(name => {
+    ].forEach((name) => {
       test(name, () => {
         expect(isModernBrowserWithEdge(userAgents[name])).toBe(true);
       });
@@ -149,7 +157,7 @@ describe('{ edge: true }', () => {
       'firefox 51 on windows',
       'firefox 51 on linux',
       'firefox 52 on mac',
-    ].forEach(name => {
+    ].forEach((name) => {
       test(name, () => {
         expect(isModernBrowserWithEdge(userAgents[name])).toBe(false);
       });
