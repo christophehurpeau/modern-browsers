@@ -29,7 +29,7 @@ npm install --save modern-browsers
 ```js
 import createIsModernBrowser from 'modern-browsers';
 
-const isModernBrowser = createIsModernBrowser({ edge: true, safari10: true });
+const isModernBrowser = createIsModernBrowser({ edge: true });
 
 console.log(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'));
 ```
@@ -37,4 +37,3 @@ console.log(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) App
 ## Options
 
 - `edge`: default to `true`, set to `false` if you configured `edge: false` in the preset.
-- `safari10`: default to `true`, set to `false` if you configured `safari10: false` in the preset.
