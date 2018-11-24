@@ -13,15 +13,15 @@
           "target": "node",
           "version": "10",
           "formats": [
-            "cjs"
+            "cjs",
+            "es"
           ]
         },
         {
           "target": "node",
           "version": "8",
           "formats": [
-            "cjs",
-            "es"
+            "cjs"
           ]
         }
       ],

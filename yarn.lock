@@ -207,7 +207,7 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.1.6.tgz#16e97aca1ec1062324a01c5a6a7d0df8dd189854"
   integrity sha512-dWP6LJm9nKT6ALaa+bnL247GHHMWir3vSlZ2+IHgHgktZQx0L3Uvq2uAWcuzIe+fujRsYWBW2q622C5UvGK9iQ==
 
-"@babel/plugin-proposal-async-generator-functions@^7.0.0":
+"@babel/plugin-proposal-async-generator-functions@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.1.0.tgz#41c1a702e10081456e23a7b74d891922dd1bb6ce"
   integrity sha512-Fq803F3Jcxo20MXUSDdmZZXrPe6BWyGcWBPPNB/M7WaUYESKDeKMOGIxEzQOjGSmW/NWb6UaPZrtTB2ekhB/ew==
@@ -251,6 +251,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-object-rest-spread" "^7.0.0"
+
+"@babel/plugin-proposal-optional-catch-binding@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-catch-binding/-/plugin-proposal-optional-catch-binding-7.0.0.tgz#b610d928fe551ff7117d42c8bb410eec312a6425"
+  integrity sha512-JPqAvLG1s13B/AuoBjdBYvn38RqW6n1TzrQO839/sIpqLpbnXKacsAgpZHzLD83Sm8SDXMkkrAvEnJ25+0yIpw==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-optional-catch-binding" "^7.0.0"
 
 "@babel/plugin-proposal-unicode-property-regex@^7.0.0":
   version "7.0.0"
@@ -324,7 +332,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-transform-async-to-generator@^7.0.0":
+"@babel/plugin-transform-async-to-generator@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-async-to-generator/-/plugin-transform-async-to-generator-7.1.0.tgz#109e036496c51dd65857e16acab3bafdf3c57811"
   integrity sha512-rNmcmoQ78IrvNCIt/R9U+cixUHeYAzgusTFgIAv+wQb9HJU4szhpDD6e5GCACmj/JP5KxuCwM96bX3L9v4ZN/g==
@@ -333,7 +341,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/helper-remap-async-to-generator" "^7.1.0"
 
-"@babel/plugin-transform-exponentiation-operator@^7.0.0":
+"@babel/plugin-transform-exponentiation-operator@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-exponentiation-operator/-/plugin-transform-exponentiation-operator-7.1.0.tgz#9c34c2ee7fd77e02779cfa37e403a2e1003ccc73"
   integrity sha512-uZt9kD1Pp/JubkukOGQml9tqAeI8NkE98oZnHZ2qHRElmeKCodbTZgOEUtujSCSLhHSBWbzNiFSDIMC4/RBTLQ==
@@ -349,7 +357,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-flow" "^7.0.0"
 
-"@babel/plugin-transform-function-name@^7.0.0":
+"@babel/plugin-transform-function-name@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-function-name/-/plugin-transform-function-name-7.1.0.tgz#29c5550d5c46208e7f730516d41eeddd4affadbb"
   integrity sha512-VxOa1TMlFMtqPW2IDYZQaHsFrq/dDoIjgN098NowhexhZcz3UGlvPgZXuE1jEvNygyWyxRacqDpCZt+par1FNg==
@@ -357,7 +365,7 @@
     "@babel/helper-function-name" "^7.1.0"
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-transform-modules-commonjs@^7.0.0":
+"@babel/plugin-transform-modules-commonjs@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.1.0.tgz#0a9d86451cbbfb29bd15186306897c67f6f9a05c"
   integrity sha512-wtNwtMjn1XGwM0AXPspQgvmE6msSJP15CX2RVfpTSTNPLhKhaOjaIfBaVfj4iUZ/VrFSodcFedwtPg/NxwQlPA==
@@ -1030,10 +1038,10 @@ babel-plugin-minify-simplify@^0.5.0:
     babel-helper-is-nodes-equiv "^0.0.1"
     babel-helper-to-multiple-sequence-expressions "^0.5.0"
 
-babel-plugin-pob-babel@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-pob-babel/-/babel-plugin-pob-babel-0.6.0.tgz#38b3b3e7549da02e2f7c5cdb689549202063f397"
-  integrity sha512-ywqYR1UyF7DpHDB9uXLEHfuplS4uT0kvqTGWk/5bOXgwrBowaDjDxfZKWxVmSvreMh040H/B2JhX3yBdL0gsuQ==
+babel-plugin-pob-babel@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-pob-babel/-/babel-plugin-pob-babel-0.6.1.tgz#8ac5ffe59a4bfbe2e7b2dffd663d6845a13e89f0"
+  integrity sha512-FbIe1t/yAEGohbFJgEk9dDaaw3DTglj5dqJJMo5G5EL07BOTOgvRLNJgnCQzCkf0aPYjNbuto67/602YnJt3Zg==
 
 babel-plugin-syntax-object-rest-spread@^6.13.0:
   version "6.13.0"
@@ -1071,22 +1079,23 @@ babel-preset-jest@^23.2.0:
     babel-plugin-jest-hoist "^23.2.0"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
 
-babel-preset-latest-node@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/babel-preset-latest-node/-/babel-preset-latest-node-2.0.2.tgz#3b932d1ef03d2b77f2af2eb8b6bfb73d536f0007"
-  integrity sha512-2kotC9j4AJYg2F4wmd/MmSklCsIRf5VRge7hko2lFaxlV3eyMvoTpgVSQSWjybnz69IcetmWUEXgxBMqD49j/g==
+babel-preset-latest-node@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-latest-node/-/babel-preset-latest-node-3.0.1.tgz#e0cb55a5be849c4ba875ac093a6862e66d6b86ef"
+  integrity sha512-be9eLNbVwtgWLWO9zv0537/hSzmEANt2agPoy8xWKh4roruh0sJZYSOu1jf5lZOCgOX+Ypoa19Pndew05qTQrg==
   dependencies:
-    "@babel/plugin-proposal-async-generator-functions" "^7.0.0"
+    "@babel/plugin-proposal-async-generator-functions" "^7.1.0"
     "@babel/plugin-proposal-object-rest-spread" "^7.0.0"
+    "@babel/plugin-proposal-optional-catch-binding" "^7.0.0"
     "@babel/plugin-proposal-unicode-property-regex" "^7.0.0"
     "@babel/plugin-syntax-async-generators" "^7.0.0"
     "@babel/plugin-syntax-object-rest-spread" "^7.0.0"
     "@babel/plugin-syntax-optional-catch-binding" "^7.0.0"
     "@babel/plugin-transform-arrow-functions" "^7.0.0"
-    "@babel/plugin-transform-async-to-generator" "^7.0.0"
-    "@babel/plugin-transform-exponentiation-operator" "^7.0.0"
-    "@babel/plugin-transform-function-name" "^7.0.0"
-    "@babel/plugin-transform-modules-commonjs" "^7.0.0"
+    "@babel/plugin-transform-async-to-generator" "^7.1.0"
+    "@babel/plugin-transform-exponentiation-operator" "^7.1.0"
+    "@babel/plugin-transform-function-name" "^7.1.0"
+    "@babel/plugin-transform-modules-commonjs" "^7.1.0"
 
 babel-preset-optimizations@^1.6.0:
   version "1.6.0"
@@ -1100,10 +1109,10 @@ babel-preset-optimizations@^1.6.0:
     babel-plugin-transform-inline-consecutive-adds "^0.4.3"
     babel-plugin-transform-undefined-to-void "^6.9.4"
 
-babel-preset-pob-env@^2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-pob-env/-/babel-preset-pob-env-2.9.0.tgz#1e029bff98d646d287cd966bb9ee951f45774a08"
-  integrity sha512-Tsgfzh936EJ1YZthsjWNc9wuhL5vH9Otn5LCaRQI4oaMpZrnyN5ujaCY26DygeEA9RnP50sBQpwHCKzKWEtiHw==
+babel-preset-pob-env@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-pob-env/-/babel-preset-pob-env-2.10.0.tgz#94aa62e514532323440568073d0dbb908abc4683"
+  integrity sha512-4esfkUkNZZAqPSzSzSgoQJytfsSlvqbTC244J6vj84O/32xmb5bsc6sK+/Ep336/8QoIsX8k6hDPr3nHGZGD/A==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.1.0"
     "@babel/plugin-proposal-export-default-from" "^7.0.0"
@@ -1112,7 +1121,7 @@ babel-preset-pob-env@^2.9.0:
     babel-plugin-discard-module-references "^1.1.2"
     babel-plugin-import-export-rename "^1.0.1"
     babel-plugin-minify-replace "^0.5.0"
-    babel-plugin-pob-babel "^0.6.0"
+    babel-plugin-pob-babel "^0.6.1"
     babel-plugin-transform-name-export-default "^1.0.0"
     babel-preset-optimizations "^1.6.0"
 
@@ -4805,23 +4814,23 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
-pob-babel@^23.4.0:
-  version "23.4.0"
-  resolved "https://registry.yarnpkg.com/pob-babel/-/pob-babel-23.4.0.tgz#d268b6d527b76fb0157ee0160bb98086124cafd1"
-  integrity sha512-jAVts8zwgT3hB6+jMu8REAajbKkO8s4FRnIy0V2WbqjTaClUrfzFeyHGrMlRJU/MzTfLPlWsCbzPjvSYbDriDA==
+pob-babel@^23.5.0:
+  version "23.5.0"
+  resolved "https://registry.yarnpkg.com/pob-babel/-/pob-babel-23.5.0.tgz#a5e1496e4dc799350f303e3fa0cdc9c9f4b7d5d6"
+  integrity sha512-nsVWXAobzrBtGjssynbPpI+cNqzA31nIg7MCrC11Sy0S4JaXcmAZOsTi5Xb8qPxcc6Gfr5ztLXBs+lVN6TyKdQ==
   dependencies:
     "@babel/preset-flow" "^7.0.0"
     babel-plugin-external-helpers "^6.22.0"
-    babel-preset-pob-env "^2.9.0"
-    rollup "^0.67.0"
+    babel-preset-pob-env "^2.10.0"
+    rollup "^0.67.3"
     rollup-config-external-dependencies "^0.1.0"
     rollup-plugin-babel "^4.0.3"
     rollup-plugin-node-resolve "^3.4.0"
 
-pob-release@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/pob-release/-/pob-release-4.6.0.tgz#a38e97233f69d0f6b28c1025c03362317f4bcac9"
-  integrity sha512-X4yPCQ2b0IZpx1vbjfH9DwmjlBpnih6EDB1hf91TGnvocQdkdsRvV2MbMXnv1DXPM9rOw5qjnBIT1/Ss/z/DUA==
+pob-release@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/pob-release/-/pob-release-4.6.1.tgz#5adb0865069f41c1fe1de1518524fabd67d44f3a"
+  integrity sha512-GqQAb6rdrJKM0TgzI0h0Xquk+vCQ+lBjk/ZkFpX86saErD4j02fs/Bud4ABOf2B7EOvTlZxGlec9bX+S0GfDVg==
   dependencies:
     conventional-recommended-bump "^0.3.0"
     inquirer "^6.0.0"
@@ -5288,7 +5297,7 @@ rollup-pluginutils@^2.3.0:
     estree-walker "^0.5.2"
     micromatch "^2.3.11"
 
-rollup@^0.67.0:
+rollup@^0.67.3:
   version "0.67.3"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.67.3.tgz#55475b1b62c43220c3b4bd7edc5846233932f50b"
   integrity sha512-TyNQCz97rKuVVbsKUTXfwIjV7UljWyTVd7cTMuE+aqlQ7WJslkYF5QaYGjMLR2BlQtUOO5CAxSVnpQ55iYp5jg==

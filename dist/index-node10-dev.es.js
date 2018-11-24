@@ -66,4 +66,4 @@ var index = ((options = {
 
 export default index;
 export { minVersionsForOptions };
-//# sourceMappingURL=index-node8.es.js.map
+//# sourceMappingURL=index-node10-dev.es.js.map
