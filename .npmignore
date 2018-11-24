@@ -5,14 +5,18 @@
 /git-hooks
 /samples
 /test
+/tsconfig.json
+/tsconfig.build.json
 .babelrc
 .codeclimate.yml
 .yo-rc.json
-jsdoc.config.js
+/yarn.lock
+/renovate.json
 
 /.settings
 /.project
 /.idea
+/.vscode
 *.sublime-project
 *.sublime-workspace
 

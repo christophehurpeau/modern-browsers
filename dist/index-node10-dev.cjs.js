@@ -3,9 +3,23 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 // https://www.npmjs.com/package/babel-preset-modern-browsers
-const agents = [{ key: 'edge', regExp: /edge\/([\d]+)/i }, { key: 'firefox', regExp: /firefox\/([\d]+)/i }, { key: 'chrome', regExp: /chrom(?:e|ium)\/([\d]+)/i }, // also works for opera.
-{ key: 'safari', regExp: /version\/([\d.]+).*safari/i }, { key: 'mobile safari webview', regExp: /(?:iPod|iPhone|iPad).+AppleWebKit\/([\d.]+)/i }];
-
+const agents = [{
+  key: 'edge',
+  regExp: /edge\/([\d]+)/i
+}, {
+  key: 'firefox',
+  regExp: /firefox\/([\d]+)/i
+}, {
+  key: 'chrome',
+  regExp: /chrom(?:e|ium)\/([\d]+)/i
+}, // also works for opera.
+{
+  key: 'safari',
+  regExp: /version\/([\d.]+).*safari/i
+}, {
+  key: 'mobile safari webview',
+  regExp: /(?:iPod|iPhone|iPad).+AppleWebKit\/([\d.]+)/i
+}];
 const minVersionsForOptions = options => {
   if (options.edge) {
     return {
@@ -18,10 +32,16 @@ const minVersionsForOptions = options => {
     };
   }
 
-  return { firefox: 57, chrome: 63, safari: 11.1, 'mobile safari webview': 605.1 };
+  return {
+    firefox: 57,
+    chrome: 63,
+    safari: 11.1,
+    'mobile safari webview': 605.1
+  };
 };
-
-var index = ((options = { edge: true }) => {
+var index = ((options = {
+  edge: true
+}) => {
   if (options.safari10 !== undefined) {
     throw new Error('option safari10 removed');
   }
@@ -29,14 +49,19 @@ var index = ((options = { edge: true }) => {
   const minVersions = minVersionsForOptions(options);
   return userAgent => {
     let agent;
-    agents.some(({ key, regExp }) => {
+    agents.some(({
+      key,
+      regExp
+    }) => {
       const res = regExp.exec(userAgent);
       if (!res || !res[1]) return false;
-      agent = { key, version: res[1] };
+      agent = {
+        key,
+        version: res[1]
+      };
       return true;
     });
     if (!agent) return false;
-
     const minVersion = minVersions[agent.key];
     if (!minVersion) return false;
     return parseFloat(agent.version) >= minVersion;
@@ -45,4 +70,4 @@ var index = ((options = { edge: true }) => {
 
 exports.minVersionsForOptions = minVersionsForOptions;
 exports.default = index;
-//# sourceMappingURL=index-node6.cjs.js.map
+//# sourceMappingURL=index-node10-dev.cjs.js.map

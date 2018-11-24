@@ -1,13 +1,24 @@
 // https://www.npmjs.com/package/babel-preset-modern-browsers
+
+interface Options {
+  edge?: boolean;
+  safari10?: never;
+}
+
 const agents = [
   { key: 'edge', regExp: /edge\/([\d]+)/i },
   { key: 'firefox', regExp: /firefox\/([\d]+)/i },
   { key: 'chrome', regExp: /chrom(?:e|ium)\/([\d]+)/i }, // also works for opera.
   { key: 'safari', regExp: /version\/([\d.]+).*safari/i },
-  { key: 'mobile safari webview', regExp: /(?:iPod|iPhone|iPad).+AppleWebKit\/([\d.]+)/i },
+  {
+    key: 'mobile safari webview',
+    regExp: /(?:iPod|iPhone|iPad).+AppleWebKit\/([\d.]+)/i,
+  },
 ];
 
-export const minVersionsForOptions = options => {
+export const minVersionsForOptions = (
+  options: Options,
+): { [agent: string]: number | undefined } => {
   if (options.edge) {
     return {
       edge: 15,
@@ -19,17 +30,23 @@ export const minVersionsForOptions = options => {
     };
   }
 
-  return { firefox: 57, chrome: 63, safari: 11.1, 'mobile safari webview': 605.1 };
+  return {
+    firefox: 57,
+    chrome: 63,
+    safari: 11.1,
+    'mobile safari webview': 605.1,
+  };
 };
 
-export default (options = { edge: true }) => {
+export default (options: Options = { edge: true }) => {
   if (options.safari10 !== undefined) {
     throw new Error('option safari10 removed');
   }
 
   const minVersions = minVersionsForOptions(options);
-  return userAgent => {
-    let agent;
+
+  return (userAgent: string) => {
+    let agent: { key: string; version: string } | undefined;
     agents.some(({ key, regExp }) => {
       const res = regExp.exec(userAgent);
       if (!res || !res[1]) return false;
@@ -38,7 +55,7 @@ export default (options = { edge: true }) => {
     });
     if (!agent) return false;
 
-    const minVersion = minVersions[agent.key];
+    const minVersion: number | undefined = minVersions[agent.key];
     if (!minVersion) return false;
     return parseFloat(agent.version) >= minVersion;
   };

@@ -11,29 +11,21 @@
       "envs": [
         {
           "target": "node",
+          "version": "10",
+          "formats": [
+            "cjs"
+          ]
+        },
+        {
+          "target": "node",
           "version": "8",
           "formats": [
             "cjs",
             "es"
           ]
-        },
-        {
-          "target": "node",
-          "version": "6",
-          "formats": [
-            "cjs"
-          ]
-        },
-        {
-          "target": "node",
-          "version": "4",
-          "formats": [
-            "cjs"
-          ]
         }
       ],
       "documentation": false,
-      "doclets": false,
       "testing": {
         "circleci": true,
         "codecov": true
