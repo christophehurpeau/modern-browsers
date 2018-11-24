@@ -1,3 +1,17 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/christophehurpeau/modern-browsers/compare/v0.6.0...v1.0.0) (2018-11-24)
+
+
+### Features
+
+* modern browsers are now ff 58 and chrome 66 ([a4e92fc](https://github.com/christophehurpeau/modern-browsers/commit/a4e92fc))
+
+
+### BREAKING CHANGES
+
+* updated browsers version
+
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/christophehurpeau/modern-browsers/compare/v0.5.1...v0.6.0) (2018-04-06)
 
