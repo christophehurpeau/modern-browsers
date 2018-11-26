@@ -5300,7 +5300,7 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-pob-babel@^23.5.0:
+pob-babel@23.5.0:
   version "23.5.0"
   resolved "https://registry.yarnpkg.com/pob-babel/-/pob-babel-23.5.0.tgz#a5e1496e4dc799350f303e3fa0cdc9c9f4b7d5d6"
   integrity sha512-nsVWXAobzrBtGjssynbPpI+cNqzA31nIg7MCrC11Sy0S4JaXcmAZOsTi5Xb8qPxcc6Gfr5ztLXBs+lVN6TyKdQ==
@@ -5313,7 +5313,7 @@ pob-babel@^23.5.0:
     rollup-plugin-babel "^4.0.3"
     rollup-plugin-node-resolve "^3.4.0"
 
-pob-release@^4.6.1:
+pob-release@4.6.1:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/pob-release/-/pob-release-4.6.1.tgz#5adb0865069f41c1fe1de1518524fabd67d44f3a"
   integrity sha512-GqQAb6rdrJKM0TgzI0h0Xquk+vCQ+lBjk/ZkFpX86saErD4j02fs/Bud4ABOf2B7EOvTlZxGlec9bX+S0GfDVg==
@@ -6801,7 +6801,7 @@ xtend@~4.0.1:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
   integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
 
-xunit-file@^1.0.0:
+xunit-file@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/xunit-file/-/xunit-file-1.0.0.tgz#6cb35a024ee94b49b2507ee3878968c6baaec398"
   integrity sha1-bLNaAk7pS0myUH7jh4loxrquw5g=
