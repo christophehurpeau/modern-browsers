@@ -99,7 +99,7 @@
     "pob-release": "4.6.1",
     "prettier": "1.15.2",
     "typescript": "3.1.6",
-    "typescript-eslint-parser": "21.0.1",
+    "typescript-eslint-parser": "21.0.2",
     "xunit-file": "1.0.0",
     "yarnhook": "0.3.0"
   }
