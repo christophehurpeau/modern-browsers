@@ -5,7 +5,7 @@
   "keywords": [],
   "author": "Christophe Hurpeau <christophe@hurpeau.com> (https://christophe.hurpeau.com)",
   "license": "ISC",
-  "repository": "git@github.com:christophehurpeau/modern-browsers.git",
+  "repository": "https://github.com:christophehurpeau/modern-browsers.git",
   "homepage": "https://github.com/christophehurpeau/modern-browsers",
   "engines": {
     "node": ">=8.3.0"
@@ -15,12 +15,14 @@
   "module:node": "./dist/index-node10.es.js",
   "module:node-dev": "./dist/index-node10-dev.es.js",
   "scripts": {
-    "build": "pob-build && tsc -p tsconfig.build.json",
+    "build": "pob-build",
+    "build:definitions": "tsc -p tsconfig.build.json",
     "clean": "rm -Rf dist",
-    "generate:test-coverage": "rm -Rf docs/coverage/ ; NODE_ENV=production BABEL_ENV=test jest --coverage --coverageReporters=lcov --coverageDirectory=docs/coverage/",
-    "lint": "npm run typescript-check && eslint --ext .ts  src/",
-    "preversion": "yarn run lint && yarn run build && pob-repository-check-clean",
-    "release": "pob-repository-check-clean && pob-release",
+    "generate:test-coverage": "rm -Rf docs/coverage/ ; NODE_ENV=production BABEL_ENV=test jest --coverage --coverageReporters=pob-lcov-reporter --coverageDirectory=docs/coverage/",
+    "lint": "npm run typescript-check && eslint --ext .ts src/",
+    "postbuild": "tsc -p tsconfig.build.json",
+    "preversion": "yarn run lint && yarn run build && repository-check-dirty",
+    "release": "repository-check-dirty && pob-release",
     "test": "jest",
     "typescript-check": "tsc --noEmit",
     "version": "pob-version",
@@ -36,18 +38,13 @@
     }
   },
   "lint-staged": {
+    "yarn.lock": ["yarn-update-lock", "git add"],
     "{package.json,.eslintrc.json}": [
-      "prettier --write",
+      "prettier --parser json --write",
       "git add"
     ],
-    "src/**/*.json": [
-      "prettier --write",
-      "git add"
-    ],
-    "src/**/*.js": [
-      "eslint --fix --quiet",
-      "git add"
-    ]
+    "src/**/*.json": ["prettier --parser json --write", "git add"],
+    "src/**/*.js": ["eslint --fix --quiet", "git add"]
   },
   "prettier": {
     "trailingComma": "all",
@@ -55,9 +52,7 @@
     "arrowParens": "always"
   },
   "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+    "extends": ["@commitlint/config-conventional"]
   },
   "jest": {
     "cacheDirectory": "./node_modules/.cache/jest",
@@ -65,42 +60,40 @@
       "<rootDir>/src/**/__tests__/**/*.ts",
       "<rootDir>/src/**/*.test.ts"
     ],
-    "collectCoverageFrom": [
-      "src/**/*.ts"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
+    "collectCoverageFrom": ["src/**/*.ts"],
+    "moduleFileExtensions": ["ts", "js"],
     "transform": {
       "^.+\\.ts$": "babel-jest"
     }
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.1.6",
-    "@commitlint/cli": "7.2.1",
-    "@commitlint/config-conventional": "7.1.2",
-    "@types/jest": "23.3.9",
-    "babel-core": "7.0.0-bridge.0",
+    "@babel/core": "7.3.3",
+    "@commitlint/cli": "7.5.2",
+    "@commitlint/config-conventional": "7.5.0",
+    "@types/jest": "24.0.6",
+    "@typescript-eslint/eslint-plugin": "1.4.1",
+    "@typescript-eslint/parser": "1.4.1",
     "babel-eslint": "10.0.1",
-    "babel-jest": "23.6.0",
+    "babel-jest": "24.1.0",
     "babel-preset-latest-node": "3.0.1",
-    "eslint": "5.9.0",
-    "eslint-config-pob": "24.0.2",
+    "eslint": "5.14.1",
+    "eslint-config-pob": "28.0.1",
     "eslint-plugin-babel": "5.3.0",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-typescript": "0.13.0",
-    "husky": "1.2.0",
-    "jest": "23.6.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-node": "8.0.1",
+    "husky": "1.3.1",
+    "jest": "24.1.0",
     "jest-junit-reporter": "1.1.0",
-    "lint-staged": "8.1.0",
-    "pob-babel": "^23.5.0",
-    "pob-release": "^4.6.1",
-    "prettier": "1.15.2",
-    "typescript": "3.1.6",
-    "typescript-eslint-parser": "21.0.1",
+    "lint-staged": "8.1.4",
+    "pob-babel": "23.6.7",
+    "pob-lcov-reporter": "1.0.0",
+    "pob-release": "4.8.3",
+    "prettier": "1.16.4",
+    "repository-check-dirty": "1.0.2",
+    "typescript": "3.3.3333",
     "xunit-file": "^1.0.0",
+    "yarn-update-lock": "0.3.2",
     "yarnhook": "0.3.0"
   }
 }
