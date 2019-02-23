@@ -23,6 +23,20 @@
           "formats": [
             "cjs"
           ]
+        },
+        {
+          "target": "browser",
+          "version": "modern",
+          "formats": [
+            "es"
+          ]
+        },
+        {
+          "target": "browser",
+          "formats": [
+            "cjs",
+            "es"
+          ]
         }
       ],
       "documentation": false,
