@@ -1,3 +1,12 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/christophehurpeau/modern-browsers/compare/v1.0.1...v1.2.0) (2019-02-23)
+
+
+### Features
+
+* add build for browsers ([e9cbfeb](https://github.com/christophehurpeau/modern-browsers/commit/e9cbfeb))
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/christophehurpeau/modern-browsers/compare/v1.0.1...v1.1.0) (2019-02-23)
 
