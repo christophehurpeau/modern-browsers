@@ -95,7 +95,7 @@
     "jest": "23.6.0",
     "jest-junit-reporter": "1.1.0",
     "lint-staged": "8.1.0",
-    "pob-babel": "23.5.0",
+    "pob-babel": "23.6.7",
     "pob-release": "4.6.1",
     "prettier": "1.15.2",
     "typescript": "3.1.6",
