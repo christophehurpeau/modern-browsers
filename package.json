@@ -78,8 +78,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.3.3",
-    "@babel/preset-env": "7.3.1",
+    "@babel/core": "7.3.4",
+    "@babel/preset-env": "7.3.4",
     "@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
     "@types/jest": "24.0.6",
