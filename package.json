@@ -105,6 +105,6 @@
     "typescript": "3.3.3333",
     "xunit-file": "^1.0.0",
     "yarn-update-lock": "0.3.2",
-    "yarnhook": "0.3.0"
+    "yarnhook": "0.4.0"
   }
 }
