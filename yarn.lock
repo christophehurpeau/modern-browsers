@@ -5349,10 +5349,10 @@ pob-babel@23.6.7:
     rollup-plugin-babel "^4.3.2"
     rollup-plugin-node-resolve "^4.0.0"
 
-pob-lcov-reporter@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/pob-lcov-reporter/-/pob-lcov-reporter-1.0.0.tgz#020d01cfd0ba937962c1a0258b79f8b24b2284d2"
-  integrity sha512-tm6gGtgX5GiVuvi8WWlCFX5fJwe3nhS94wtb9heeVG/5CpnTUDAJCukVEtR4LposHHunR2l8M8bgLTecO4uZcg==
+pob-lcov-reporter@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/pob-lcov-reporter/-/pob-lcov-reporter-1.0.1.tgz#b5ad7d537c1889c696476e1e399577d213fed563"
+  integrity sha512-g8rRFyM3r91CFeiTszzP4FPcchU4wsjHOAoSXOzhUpUqfudMANY88ZB2cBd+TSPCMRhDFcK8ByxlV/wxIBN+RQ==
   dependencies:
     istanbul-reports "^2.1.1"
 
