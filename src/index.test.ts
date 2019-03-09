@@ -17,6 +17,8 @@ const userAgents: { [key: string]: string } = {
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/603.2.4 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.4',
   'safari 11.1 on mac':
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/605.1.4 (KHTML, like Gecko) Version/11.1 Safari/605.1.4',
+  'safari 12 on mac':
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15',
   'safari 10 on iPhone':
     'Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1',
   'chrome 56 on mac':
@@ -68,7 +70,7 @@ describe('{ edge: false }', () => {
 
   describe('modern browsers', () => {
     [
-      'safari 11.1 on mac',
+      'safari 12 on mac',
       'chrome 66 on mac',
       'opera 53 on linux',
       'firefox 58 on windows',
@@ -96,6 +98,7 @@ describe('{ edge: false }', () => {
       'safari 10 on mac',
       'safari 10 on iPhone',
       'safari 10.1 on mac',
+      'safari 11.1 on mac',
       'chrome 56 on iPhone 10.3',
       'chrome 60 on iPhone 10.3.3',
       'firefox focus on iPhone 10.3',
