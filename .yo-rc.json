@@ -47,6 +47,14 @@
       "entries": [
         "index"
       ]
+    },
+    "renovate": {
+      "enable": true
+    }
+  },
+  "modern-browsers": {
+    "type": {
+      "type": "lib"
     }
   }
 }

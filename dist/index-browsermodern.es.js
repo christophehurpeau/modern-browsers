@@ -31,7 +31,7 @@ const minVersionsForOptions = function minVersionsForOptions(options) {
   return {
     firefox: 58,
     chrome: 66,
-    safari: 11.1,
+    safari: 12,
     'mobile safari webview': 605.1
   };
 };
