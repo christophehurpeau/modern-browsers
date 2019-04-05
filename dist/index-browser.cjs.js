@@ -71,6 +71,6 @@ var index = (function (options) {
   };
 });
 
-exports.minVersionsForOptions = minVersionsForOptions;
 exports.default = index;
+exports.minVersionsForOptions = minVersionsForOptions;
 //# sourceMappingURL=index-browser.cjs.js.map

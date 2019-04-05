@@ -68,6 +68,6 @@ var index = ((options = {
   };
 });
 
-exports.minVersionsForOptions = minVersionsForOptions;
 exports.default = index;
+exports.minVersionsForOptions = minVersionsForOptions;
 //# sourceMappingURL=index-node8.cjs.js.map
