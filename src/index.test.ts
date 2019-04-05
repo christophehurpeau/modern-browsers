@@ -53,6 +53,8 @@ const userAgents: { [key: string]: string } = {
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0',
   'firefox focus on iPhone 10.3':
     'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Focus/3.3.1 Mobile/14G60',
+  'firefox 66 on mac':
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0',
   'opera 34 on mac':
     'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36 OPR/34.0.2036.25',
   'opera 43 on windows':
@@ -73,7 +75,7 @@ describe('{ edge: false }', () => {
       'safari 12 on mac',
       'chrome 66 on mac',
       'opera 53 on linux',
-      'firefox 58 on windows',
+      'firefox 66 on mac',
     ].forEach((name) => {
       test(name, () => {
         expect(isModernBrowser(userAgents[name])).toBe(true);
@@ -138,6 +140,8 @@ describe('{ edge: true }', () => {
       'firefox 55 on windows',
       'firefox 55 on mac',
       'firefox 56 on mac',
+      'firefox 58 on windows',
+      'firefox 66 on mac',
       'chrome 63 on mac',
       'opera 50 on linux',
     ].forEach((name) => {

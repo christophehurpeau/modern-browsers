@@ -31,7 +31,7 @@ export const minVersionsForOptions = (
   }
 
   return {
-    firefox: 58,
+    firefox: 62,
     chrome: 66,
     safari: 12,
     'mobile safari webview': 605.1,
