@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/christophehurpeau/modern-browsers/compare/v1.2.1...v1.3.0) (2019-04-05)
+
+
+### Features
+
+* json strings only supported since firefox 62 ([96f4e1a](https://github.com/christophehurpeau/modern-browsers/commit/96f4e1a))
+
+
+
 ## [1.2.1](https://github.com/christophehurpeau/modern-browsers/compare/v1.2.0...v1.2.1) (2019-03-09)
 
 
