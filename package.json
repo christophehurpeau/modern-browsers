@@ -80,8 +80,8 @@
   "devDependencies": {
     "@babel/core": "7.4.0",
     "@babel/preset-env": "7.4.2",
-    "@commitlint/cli": "7.5.2",
-    "@commitlint/config-conventional": "7.5.0",
+    "@commitlint/cli": "7.6.1",
+    "@commitlint/config-conventional": "7.6.0",
     "@pob/eslint-config-babel": "29.1.0",
     "@pob/eslint-config-typescript": "29.1.0",
     "@types/jest": "24.0.11",
