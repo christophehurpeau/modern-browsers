@@ -100,7 +100,7 @@
     "repository-check-dirty": "1.0.2",
     "typescript": "3.4.1",
     "xunit-file": "^1.0.0",
-    "yarn-update-lock": "0.3.4",
+    "yarn-update-lock": "0.6.1",
     "yarnhook": "0.4.0"
   }
 }
