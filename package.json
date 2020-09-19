@@ -8,9 +8,14 @@
   "repository": "https://github.com:christophehurpeau/modern-browsers.git",
   "homepage": "https://github.com/christophehurpeau/modern-browsers",
   "engines": {
-    "node": ">=8.3.0"
+    "node": ">=10.13.0"
   },
-  "browserslist": ["> 0.1%", "Firefox ESR", "not ie < 9", "not dead"],
+  "browserslist": [
+    "> 0.1%",
+    "Firefox ESR",
+    "not ie < 9",
+    "not dead"
+  ],
   "main": "./index.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index-browser.es.js",
@@ -29,32 +34,14 @@
     "build:definitions": "tsc -p tsconfig.build.json",
     "clean": "rm -Rf dist",
     "generate:test-coverage": "rm -Rf docs/coverage/ ; NODE_ENV=production BABEL_ENV=test jest --coverage --coverageReporters=pob-lcov-reporter --coverageDirectory=docs/coverage/",
-    "lint": "tsc && eslint --ext .ts src/",
+    "lint": "tsc && eslint --ext .js,.ts --quiet *.js src",
     "postbuild": "tsc -p tsconfig.build.json",
     "preversion": "yarn run lint && yarn run build && repository-check-dirty",
-    "release": "repository-check-dirty && pob-release",
+    "release": "repository-check-dirty && standard-version -a -m 'chore(release): %s [skip ci]' && git push --follow-tags origin master && npm publish",
     "test": "jest",
     "test:watch": "jest",
     "version": "pob-version",
     "watch": "pob-watch"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
-      "post-checkout": "yarnhook",
-      "post-merge": "yarnhook",
-      "post-rewrite": "yarnhook",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "yarn.lock": ["yarn-update-lock", "git add"],
-    "{package.json,.eslintrc.json}": [
-      "prettier --parser json --write",
-      "git add"
-    ],
-    "src/**/*.json": ["prettier --parser json --write", "git add"],
-    "src/**/*.{js,ts}": ["eslint --fix --quiet", "git add"]
   },
   "prettier": {
     "trailingComma": "all",
@@ -62,7 +49,9 @@
     "arrowParens": "always"
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@pob/commitlint-config"
+    ]
   },
   "jest": {
     "cacheDirectory": "./node_modules/.cache/jest",
@@ -70,37 +59,75 @@
       "<rootDir>/src/**/__tests__/**/*.ts",
       "<rootDir>/src/**/*.test.ts"
     ],
-    "collectCoverageFrom": ["src/**/*.ts"],
-    "moduleFileExtensions": ["ts", "js"],
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
     "transform": {
       "^.+\\.ts$": "babel-jest"
-    }
+    },
+    "testEnvironment": "node"
   },
-  "dependencies": {},
+  "pob": {
+    "babelEnvs": [
+      {
+        "target": "node",
+        "version": "10",
+        "formats": [
+          "cjs",
+          "es"
+        ]
+      },
+      {
+        "target": "browser",
+        "version": "modern",
+        "formats": [
+          "es"
+        ]
+      },
+      {
+        "target": "browser",
+        "formats": [
+          "cjs",
+          "es"
+        ]
+      }
+    ],
+    "entries": [
+      "index"
+    ]
+  },
   "devDependencies": {
-    "@babel/core": "7.4.0",
-    "@babel/preset-env": "7.4.2",
-    "@commitlint/cli": "7.5.2",
-    "@commitlint/config-conventional": "7.5.0",
-    "@pob/eslint-config-babel": "29.1.0",
-    "@pob/eslint-config-typescript": "29.1.0",
-    "@types/jest": "24.0.11",
-    "babel-jest": "24.5.0",
-    "babel-preset-latest-node": "3.1.1",
-    "babel-preset-modern-browsers": "13.1.0",
-    "eslint": "5.16.0",
-    "husky": "1.3.1",
-    "jest": "24.5.0",
-    "jest-junit-reporter": "1.1.0",
-    "lint-staged": "8.1.5",
-    "pob-babel": "23.8.0",
-    "pob-lcov-reporter": "1.0.2",
-    "pob-release": "4.9.1",
-    "prettier": "1.16.4",
-    "repository-check-dirty": "1.0.2",
-    "typescript": "3.4.1",
-    "xunit-file": "^1.0.0",
-    "yarn-update-lock": "0.3.4",
-    "yarnhook": "0.4.0"
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.11.5",
+    "@pob/commitlint-config": "1.1.2",
+    "@pob/eslint-config": "40.0.0",
+    "@pob/eslint-config-node": "40.0.0",
+    "@pob/eslint-config-typescript": "40.0.0",
+    "@pob/root": "2.3.0",
+    "@types/jest": "26.0.14",
+    "@typescript-eslint/eslint-plugin": "4.1.1",
+    "@typescript-eslint/parser": "4.1.1",
+    "babel-jest": "26.3.0",
+    "babel-preset-latest-node": "5.0.0",
+    "babel-preset-modern-browsers": "15.0.1",
+    "eslint": "7.9.0",
+    "eslint-import-resolver-node": "0.3.4",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-unicorn": "22.0.0",
+    "husky": "4.3.0",
+    "jest": "26.4.2",
+    "pob-babel": "24.14.1",
+    "pob-lcov-reporter": "2.4.0",
+    "prettier": "2.1.2",
+    "standard-version": "9.0.0",
+    "typescript": "4.0.3",
+    "xunit-file": "^1.0.0"
   }
 }

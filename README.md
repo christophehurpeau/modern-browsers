@@ -8,8 +8,6 @@
 
 <p align="center">
   <a href="https://npmjs.org/package/modern-browsers"><img src="https://img.shields.io/npm/v/modern-browsers.svg?style=flat-square"></a>
-  <a href="https://circleci.com/gh/christophehurpeau/modern-browsers"><img src="https://img.shields.io/circleci/project/christophehurpeau/modern-browsers/master.svg?style=flat-square"></a>
-  <a href="https://david-dm.org/christophehurpeau/modern-browsers"><img src="https://david-dm.org/christophehurpeau/modern-browsers.svg?style=flat-square"></a>
   <a href="https://codecov.io/gh/christophehurpeau/modern-browsers"><img src="https://img.shields.io/codecov/c/github/christophehurpeau/modern-browsers/master.svg?style=flat-square"></a>
 </p>
 
@@ -30,7 +28,11 @@ import createIsModernBrowser from 'modern-browsers';
 
 const isModernBrowser = createIsModernBrowser({ edge: true });
 
-console.log(isModernBrowser('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'));
+console.log(
+  isModernBrowser(
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'
+  )
+);
 ```
 
 ## Options

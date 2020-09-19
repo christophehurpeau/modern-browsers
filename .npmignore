@@ -1,16 +1,21 @@
-/.circleci
+/.github
 /build
 /docs
 /examples
 /samples
 /test
+/*.config.js
 /tsconfig.json
 /tsconfig.build.json
+/dist/tsbuildinfo
 .babelrc
 .codeclimate.yml
 .yo-rc.json
 /yarn.lock
 /renovate.json
+/.yarn
+/.yarnrc.yml
+/.pnp.js
 
 /.settings
 /.project
