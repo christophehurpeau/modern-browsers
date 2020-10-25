@@ -136,7 +136,7 @@
     "husky": "4.3.0",
     "jest": "26.5.2",
     "pob-babel": "25.0.1",
-    "pob-lcov-reporter": "3.0.0",
+    "pob-lcov-reporter": "3.0.1",
     "prettier": "2.1.2",
     "rollup": "2.29.0",
     "standard-version": "9.0.0",
