@@ -1,3 +1,14 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.4.0](https://github.com/christophehurpeau/modern-browsers/compare/v1.3.0...v1.4.0) (2020-11-01)
+
+
+### Features
+
+* update list of modern browsers based on babel-preset-modern-browsers v15 ([2fe32b2](https://github.com/christophehurpeau/modern-browsers/commit/2fe32b294e3d8c2bb88a728e89a147b0d05b7e66))
+
 # [1.3.0](https://github.com/christophehurpeau/modern-browsers/compare/v1.2.1...v1.3.0) (2019-04-05)
 
 
@@ -146,6 +157,3 @@
 ### Features
 
 * first commit ([e1858a3](https://github.com/christophehurpeau/modern-browsers/commit/e1858a3))
-
-
-
