@@ -2773,15 +2773,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-modern-browsers@npm:15.0.1, babel-preset-modern-browsers@npm:^15.0.1":
-  version: 15.0.1
-  resolution: "babel-preset-modern-browsers@npm:15.0.1"
+"babel-preset-modern-browsers@npm:15.0.2, babel-preset-modern-browsers@npm:^15.0.1":
+  version: 15.0.2
+  resolution: "babel-preset-modern-browsers@npm:15.0.2"
   dependencies:
     "@babel/plugin-syntax-numeric-separator": ^7.10.4
     "@babel/plugin-transform-modules-commonjs": ^7.10.4
   peerDependencies:
     "@babel/core": ^7.10.5
-  checksum: e8d36a28fc78a62260fba9a7f37973f7aacced5f94d7586f1ef400c71cf7391289424d39af268287440b8f91cff722f7ba45778402201bbbbf9598097e4c838c
+  checksum: 113153e11de61c40416eaf9d5cb6a8f3cf7567ce721436715c8f420f76341a406a6d03627392017a496099c4854dce8b3e98fa3909f02b49136ee7997103a43f
   languageName: node
   linkType: hard
 
@@ -7081,7 +7081,7 @@ __metadata:
     "@typescript-eslint/parser": 4.4.0
     babel-jest: 26.5.2
     babel-preset-latest-node: 5.0.0
-    babel-preset-modern-browsers: 15.0.1
+    babel-preset-modern-browsers: 15.0.2
     eslint: 7.11.0
     eslint-import-resolver-node: 0.3.4
     eslint-plugin-import: 2.22.1
