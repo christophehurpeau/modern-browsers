@@ -634,14 +634,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-top-level-await@npm:^7.10.4":
-  version: 7.10.4
-  resolution: "@babel/plugin-syntax-top-level-await@npm:7.10.4"
+"@babel/plugin-syntax-top-level-await@npm:^7.10.4, @babel/plugin-syntax-top-level-await@npm:^7.12.1":
+  version: 7.12.1
+  resolution: "@babel/plugin-syntax-top-level-await@npm:7.12.1"
   dependencies:
     "@babel/helper-plugin-utils": ^7.10.4
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 998d87fbd38a2c7d1b630ccd0a90430a70dec6b7fb23fc37c60cbc10de7112a094c786602d9c8e3093568f538eb2642705006682ce58eb922f2eda889af3ad48
+  checksum: 9767e46ddc1add9133a21f5d6c4452e9a62f891fe1db5d8291f62f9036f9e697bc118adad43109a8740ac15769e9489d68d134b17cfe9f3bdf06d2c50c9c6dce
   languageName: node
   linkType: hard
 
@@ -2757,19 +2757,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-latest-node@npm:5.0.0, babel-preset-latest-node@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "babel-preset-latest-node@npm:5.0.0"
+"babel-preset-latest-node@npm:5.2.0, babel-preset-latest-node@npm:^5.0.0":
+  version: 5.2.0
+  resolution: "babel-preset-latest-node@npm:5.2.0"
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator": ^7.10.4
     "@babel/plugin-proposal-optional-catch-binding": ^7.10.4
     "@babel/plugin-proposal-optional-chaining": ^7.10.4
     "@babel/plugin-proposal-unicode-property-regex": ^7.10.4
     "@babel/plugin-syntax-numeric-separator": ^7.10.4
+    "@babel/plugin-syntax-top-level-await": ^7.12.1
     "@babel/plugin-transform-modules-commonjs": ^7.10.4
   peerDependencies:
     "@babel/core": ^7.10.5
-  checksum: 7fd4e88db9618f87493abe8ea2f902251278c119df436423db200c599e6ec876e7cd52900e16612da81a417a731dfb1a1f90f0d300eae4e8ce242211388eca88
+  checksum: bb5c85a3392e70c34189847bb55f3272ac1573bd06921df668fc991793d1ebdd595410ad49ccbbc3c324cd5406f8c72be84155c95a4a2875c8936d0efd221ecb
   languageName: node
   linkType: hard
 
@@ -7080,7 +7081,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 4.4.0
     "@typescript-eslint/parser": 4.4.0
     babel-jest: 26.5.2
-    babel-preset-latest-node: 5.0.0
+    babel-preset-latest-node: 5.2.0
     babel-preset-modern-browsers: 15.0.1
     eslint: 7.11.0
     eslint-import-resolver-node: 0.3.4
