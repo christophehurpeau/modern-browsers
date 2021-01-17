@@ -7,19 +7,19 @@
     }
   },
   "pob": {
-    "pob-config": {
-      "documentation": false,
-      "testing": {
-        "codecov": true,
-        "ci": true
-      }
-    },
     "renovate": {
       "enable": true
     },
     "project": {
       "type": "lib",
       "yarn2": true
+    },
+    "lib": {
+      "documentation": false,
+      "testing": {
+        "codecov": true,
+        "ci": true
+      }
     }
   },
   "modern-browsers": {}

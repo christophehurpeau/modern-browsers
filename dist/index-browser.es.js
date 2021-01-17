@@ -1,11 +1,11 @@
 // https://www.npmjs.com/package/babel-preset-modern-browsers
-var minVersions = {
+const minVersions = {
   chrome: 80,
   firefox: 78,
   safari: 13.1 // 'mobile safari webview': 605.1,
 
 };
-var agents = [{
+const agents = [{
   key: 'firefox',
   regExp: /firefox\/(\d+)/i
 }, {
@@ -21,20 +21,21 @@ var agents = [{
 // },
 ];
 function isModernBrowser(userAgent) {
-  var agent;
-  agents.some(function (_ref) {
-    var key = _ref.key,
-        regExp = _ref.regExp;
-    var res = regExp.exec(userAgent);
+  let agent;
+  agents.some(({
+    key,
+    regExp
+  }) => {
+    const res = regExp.exec(userAgent);
     if (!res || !res[1]) return false;
     agent = {
-      key: key,
+      key,
       version: res[1]
     };
     return true;
   });
   if (!agent) return false;
-  var minVersion = minVersions[agent.key];
+  const minVersion = minVersions[agent.key];
   if (!minVersion) return false;
   return parseFloat(agent.version) >= minVersion;
 }
