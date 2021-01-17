@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/christophehurpeau/modern-browsers/compare/v1.4.0...v2.0.0) (2021-01-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires node 12
+
+* update dev deps ([396adb2](https://github.com/christophehurpeau/modern-browsers/commit/396adb2b7ae70aaddd3481df5a2bd56fe451d78f))
+
 ## [1.4.0](https://github.com/christophehurpeau/modern-browsers/compare/v1.3.0...v1.4.0) (2020-11-01)
 
 
