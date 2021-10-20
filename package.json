@@ -122,7 +122,7 @@
   "devDependencies": {
     "@babel/core": "7.12.10",
     "@babel/preset-env": "7.12.11",
-    "@pob/commitlint-config": "2.0.1",
+    "@pob/commitlint-config": "2.2.0",
     "@pob/eslint-config": "42.0.1",
     "@pob/eslint-config-node": "42.0.0",
     "@pob/eslint-config-typescript": "42.0.1",
