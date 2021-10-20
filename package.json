@@ -126,7 +126,7 @@
     "@pob/eslint-config": "42.0.1",
     "@pob/eslint-config-node": "42.0.0",
     "@pob/eslint-config-typescript": "42.0.1",
-    "@pob/root": "3.0.3",
+    "@pob/root": "3.3.0",
     "@types/jest": "26.0.20",
     "@typescript-eslint/eslint-plugin": "4.13.0",
     "@typescript-eslint/parser": "4.13.0",
