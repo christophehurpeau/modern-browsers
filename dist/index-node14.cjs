@@ -44,5 +44,6 @@ function isModernBrowser(userAgent) {
   return parseFloat(agent.version) >= minVersion;
 }
 
-exports["default"] = isModernBrowser;
+exports.isModernBrowser = isModernBrowser;
+exports.minVersions = minVersions;
 //# sourceMappingURL=index-node14.cjs.map

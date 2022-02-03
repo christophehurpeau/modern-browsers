@@ -2,7 +2,7 @@
 
 type AgentKeys = 'chrome' | 'firefox' | 'safari';
 
-const minVersions: Record<AgentKeys, number> = {
+export const minVersions: Record<AgentKeys, number> = {
   chrome: 80,
   firefox: 78,
   safari: 13.1,
@@ -29,7 +29,7 @@ const agents: Agent[] = [
   // },
 ];
 
-export default function isModernBrowser(userAgent: string): boolean {
+export function isModernBrowser(userAgent: string): boolean {
   let agent: AgentVersion | undefined;
   agents.some(({ key, regExp }) => {
     const res = regExp.exec(userAgent);

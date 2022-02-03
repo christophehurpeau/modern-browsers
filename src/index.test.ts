@@ -1,4 +1,4 @@
-import isModernBrowser from '.';
+import { isModernBrowser } from '.';
 
 const userAgents: Record<string, string> = {
   'ie 11':

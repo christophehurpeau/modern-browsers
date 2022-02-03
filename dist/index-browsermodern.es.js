@@ -40,5 +40,5 @@ function isModernBrowser(userAgent) {
   return parseFloat(agent.version) >= minVersion;
 }
 
-export { isModernBrowser as default };
+export { isModernBrowser, minVersions };
 //# sourceMappingURL=index-browsermodern.es.js.map
