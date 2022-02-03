@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/christophehurpeau/modern-browsers/compare/v3.0.0...v4.0.0) (2022-02-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed default export, use isModernBrowser instead
+
+### Code Refactoring
+
+* remove default export for named export isModernBrowser ([0975e38](https://github.com/christophehurpeau/modern-browsers/commit/0975e3884946d814904ef1a226ce7603605706c8))
+
 ## [3.0.0](https://github.com/christophehurpeau/modern-browsers/compare/v2.0.0...v3.0.0) (2022-02-03)
 
 
